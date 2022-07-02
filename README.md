@@ -7,7 +7,7 @@ A simple web app to view GitHub profiles made with React and Tailwind
 Example of a user profile: 
 ![](./example/example_profile.png)
 
-It even works with organisations as well! 
+It even works with organisations! 
 ![](./example/example_organization.png)
 
 ## About

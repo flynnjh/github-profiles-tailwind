@@ -12,7 +12,7 @@ It even works with organisations!
 
 ## About
 
-This app is available on [Heroku](https://github-profiles-tw.herokuapp.com/). The app may take sometime to start up because this dyno won’t be particularly popular.
+This app is available on [Vercel](https://github-profiles-tailwind.vercel.app/). The app may take sometime to start up because this dyno won’t be particularly popular.
 
 For my first proper React app, I wanted to build something simple with an API that doesn’t require an API key or OAuth. So, I decided to build a little GitHub profile viewer in React, using Tailwind for styling and Axios for API calls.
 

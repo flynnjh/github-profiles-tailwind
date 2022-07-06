@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import UserInfo from "./components/UserInfo";
 import ReposView from "./components/ReposView";
 import axios from "axios";
+import avatarPlaceholder from "./avatar.svg";
 
 const ghApiUrl = "https://api.github.com/users";
 
@@ -53,10 +54,17 @@ function App() {
   };
 
   useEffect(() => {
-    const username = "w3cj";
-    const title = username + " - GH Profiles";
-    document.title = title;
-    getUser(username);
+
+    const placeholderUser = {
+      login: 'example',
+      name: 'placeholder',
+      created_at: '2015-09-11T21:50:35Z',
+      avatar_url: avatarPlaceholder,
+      bio: 'This is a placeholder! Search for a username...'
+    }
+  
+    setUser(placeholderUser); 
+    setRateLimited(false);
 
   }, []);
 

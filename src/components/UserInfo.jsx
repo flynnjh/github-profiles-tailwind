@@ -33,12 +33,12 @@ const UserInfo = ({user}) => {
         <a href={correctBlogUrl}>{user.blog}</a>
       </h1>
       <div class="flex flex-row py-2">
-        {!user.following == 0 ? <h5 class="font-extralight pr-4">
+        {!user.following == 0 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=following"}><h5 class="font-extralight pr-4">
          <strong class='font-bold'>{user.following}</strong> Following
-        </h5> : null}
-        {!user.followers == 0 ? <h5 class="font-extralight">
-        <strong class='font-bold'>{user.followers}</strong> Followers
-        </h5> : null}
+        </h5></a> : null}
+        {!user.followers == 0 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=followers"}><h5 class="font-extralight pr-4">
+         <strong class='font-bold'>{user.followers}</strong> Followers
+        </h5></a> : null}
       </div>
       { !user.message ? <h5 class="font-extralight">
         Created On: {user.created_at}

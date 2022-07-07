@@ -40,7 +40,7 @@ const UserInfo = ({user}) => {
          <strong class='font-bold'>{user.followers}</strong> Followers
         </h5></a> : null}
       </div>
-      { !user.message ? <h5 class="font-extralight">
+      { !user.message ? <h5 class="font-extralight pt-2">
         Created On: {user.created_at}
         </h5> : null}
     </div>

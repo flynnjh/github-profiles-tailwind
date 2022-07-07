@@ -60,7 +60,9 @@ function App() {
       name: 'placeholder',
       created_at: '2015-09-11T21:50:35Z',
       avatar_url: avatarPlaceholder,
-      bio: 'This is a placeholder! Search for a username...'
+      bio: 'This is a placeholder! Search for a user on GitHub...',
+      followers: 999,
+      following: 11
     }
   
     setUser(placeholderUser); 

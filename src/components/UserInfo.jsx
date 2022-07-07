@@ -32,9 +32,14 @@ const UserInfo = ({user}) => {
       <h1 class="text-sky-500 transition duration-150 hover:underline text-xl font-extralight py-1">
         <a href={correctBlogUrl}>{user.blog}</a>
       </h1>
-      { !user.message ? <h5 class="font-extralight">
-        Created On: {user.created_at}
-      </h5> : null}
+      <div class="flex flex-row py-2">
+        {!user.following == 0 ? <h5 class="font-extralight pr-4">
+         <strong class='font-bold'>{user.following}</strong> Following
+        </h5> : null}
+        {!user.followers == 0 ? <h5 class="font-extralight">
+        <strong class='font-bold'>{user.followers}</strong> Followers
+        </h5> : null}
+      </div>
     </div>
     <div class="hidden sm:flex shrink-0 w-28 h-28 xl:w-40 xl:h-40">
       <img class="rounded-full" alt={user.username} src={user.avatar_url}></img>

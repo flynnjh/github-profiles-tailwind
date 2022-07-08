@@ -75,7 +75,7 @@ function App() {
       <header>
         {user && !rateLimited ? <UserInfo user={user}/> : <h1 class="flex justify-center font-bold text-5xl p-9">RATE LIMITED</h1>}
         <div class="py-2 px-5">
-          {user && !rateLimited ? <input id="search" class="input w-full max-w-xs h-9"
+          {user && !rateLimited ? <input id="search" class="input w-full max-w-xs h-6"
             placeholder={"Search Username..."}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

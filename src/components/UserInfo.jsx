@@ -42,8 +42,11 @@ const UserInfo = ({user}) => {
         {!user.followers == 0 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=followers"}><h5 class="font-extralight pr-4">
          <strong class='font-bold'>{user.followers}</strong> Followers
         </h5></a> : null}
-        {user.followers == 0 && user.following == 0 ? <h5 class="font-extralight pr-4">
+        {user.followers == 0 && user.following == 0 && user.type == "User" ? <h5 class="font-extralight pr-4">
           Account is likely private.
+        </h5> : null}
+        {user.type == "Organization" ? <h5 class="font-extralight pr-4">
+          Account is an organization.
         </h5> : null}
       </div>
       { !user.message ? <h5 class="font-extralight pt-2">

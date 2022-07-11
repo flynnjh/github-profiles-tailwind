@@ -1,7 +1,7 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import UserInfo from "./components/UserInfo";
 import ReposView from "./components/ReposView";
-import axios from "axios";
 import avatarPlaceholder from "./avatar.svg";
 
 const ghApiUrl = "https://api.github.com/users";
@@ -58,11 +58,11 @@ function App() {
     const placeholderUser = {
       login: 'example',
       name: 'placeholder',
-      created_at: '2015-09-11T21:50:35Z',
+      created_at: '3005-01-01T21:50:35Z',
       avatar_url: avatarPlaceholder,
       bio: 'This is a placeholder! Search for a user on GitHub...',
       followers: 999,
-      following: 11
+      following: 48
     }
   
     setUser(placeholderUser); 
@@ -74,8 +74,8 @@ function App() {
     <div className="App">
       <header>
         {user && !rateLimited ? <UserInfo user={user}/> : <h1 class="flex justify-center font-bold text-5xl p-9">RATE LIMITED</h1>}
-        <div class="py-2 px-5">
-          {user && !rateLimited ? <input id="search" class="input w-full max-w-xs h-6"
+        <div class="px-9 py-3 pb-2">
+          {user && !rateLimited ? <input id="search" class="text-sm bg-transparent w-full max-w-xs h-6"
             placeholder={"Search Username..."}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

@@ -39,8 +39,11 @@ const UserInfo = ({user}) => {
         {!user.following == 0 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=following"}><h5 class="font-extralight pr-4">
          <strong class='font-bold'>{user.following}</strong> Following
         </h5></a> : null}
-        {!user.followers == 0 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=followers"}><h5 class="font-extralight pr-4">
+        {!user.followers == 0 && !user.followers == 1 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=followers"}><h5 class="font-extralight pr-4">
          <strong class='font-bold'>{user.followers}</strong> Followers
+        </h5></a> : null}
+        {user.followers == 1 ? <a class="transition duration-150 hover:underline" href={"https://github.com/" + user.login + "?tab=followers"}><h5 class="font-extralight pr-4">
+         <strong class='font-bold'>{user.followers}</strong> Follower
         </h5></a> : null}
         {user.followers == 0 && user.following == 0 && user.type == "User" ? <h5 class="font-extralight pr-4">
           Account is likely private.

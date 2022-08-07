@@ -37,7 +37,7 @@ function App() {
       })
       .then(function () {
         axios
-        .get(`${ghApiUrl}/${username}/repos`)
+        .get(`${ghApiUrl}/${username}/repos?&sort=updated`)
         .then(function (response) {
           setUserRepo(response.data);
         })

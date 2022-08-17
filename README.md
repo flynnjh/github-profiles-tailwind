@@ -2,6 +2,8 @@
 
 A simple web app to view GitHub profiles made with React and Tailwind 
 
+As this was my first web dev project, I do not update it and as such this repository has been archived.
+
 ## Examples
 
 Example of a user profile: 
